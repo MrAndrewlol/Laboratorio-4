@@ -22,7 +22,7 @@ public class Telefono implements ITelefono{
      * @return El nombre del teléfono. EJ: Redmi Note 8
      */
     public String obtenerNombre(){
-        System.out.println("Por favor ingresar el nombre de la cancion");
+        System.out.println("Por favor ingresar el nombre del telefono");
         nombre = teclado.nextLine();
         
         return nombre;
@@ -32,15 +32,33 @@ public class Telefono implements ITelefono{
     /**
      * @return El número del teléfono.
      */
-    String obtenerNumero();
+    public String obtenerNumero(){
+        System.out.println("Por favor ingresar el numero del telefono");
+        Numbero = teclado.nextLine();
+        
+        return Numbero;
+
+    }
 
     /**
      * @return El dueño del teléfono.
      */
-    String obtenerDueño();
+    public String obtenerDueño(){
+        System.out.println("Por favor ingresar el dueño del telefono");
+        Numbero = teclado.nextLine();
+        
+        return dueno;
 
+    }
+
+
+    //En construccion 
     /**
      * @return Los contactos del teléfono.
      */
-    ArrayList<IContacto> obtenerContactos();
+    public ArrayList<IContacto> obtenerContactos(){
+        System.out.println("Por favor ingresar el nombre de la cancion");
+        return null;
+        
+    }
 }
