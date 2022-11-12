@@ -4,6 +4,7 @@
 
 //Interfaces del laboratorio 4 
 
+
 import java.util.ArrayList;
 
 /**
@@ -15,12 +16,14 @@ public class ModoRadio {
     public boolean buleano;
     public float CambiarRadio = 0f;
     public ArrayList<Float> guardaemisoras;
+    Bandas banda = Bandas.AM;
 
     /**
      * Cambia la banda a AM.
      */
     void cambiarA_AM(){
         buleano = false;
+        banda = Bandas.AM;
         
         
     }
@@ -30,13 +33,42 @@ public class ModoRadio {
      */
     void cambiarA_FM(){
         buleano = true;
+        banda = Bandas.FM;
+        
+    }
+
+
+      /**
+     * @return Si se encuentra en FM o AM.
+     */
+    Bandas obtenerBanda(){
+        switch(banda){
+            case AM:{
+                banda = Bandas.AM;
+                System.out.println("Emisoras actual es AM");
+                break;
+
+            }
+            case FM:{
+                banda = Bandas.FM;
+                System.out.println("Emisoras actual es FM");
+                break;
+
+            }
+            default:{
+                System.out.println("No se ha encontrado la radio volviendo a AM");
+                break;
+            }
+
+        }
+        return banda;
     }
 
     /**
      * Cambia de emisora a una superior por DELTA_EMISORA.
      */
     void subirEmisora(){
-        CambiarRadio = CambiarRadio + DELTA_EMISORA;
+        CambiarRadio = (CambiarRadio + DELTA_EMISORA);
 
     }
 
@@ -44,7 +76,12 @@ public class ModoRadio {
      * Cambia la emisora a una inferior por DELTA_EMISORA.
      */
     void bajarEmisora(){
-        CambiarRadio = CambiarRadio - DELTA_EMISORA;
+        if (CambiarRadio >= 0){
+            CambiarRadio = (CambiarRadio - DELTA_EMISORA) ;
+            
+
+        }
+        
     }
 
     /**
