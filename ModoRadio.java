@@ -1,7 +1,8 @@
 
 
 //Universidad del Valle de Guatemala
-
+//Andre Yatmian Jo Mai 22199
+//Esteban Meza 22252
 //Interfaces del laboratorio 4 
 
 
