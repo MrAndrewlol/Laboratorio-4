@@ -3,7 +3,10 @@
 //Universidad del Valle de Guatemala
 
 //Interfaces del laboratorio 4 
+//Andre Yatmian Jo Mai 22199
+//Esteban Meza 22252
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,10 +15,18 @@ import java.util.Scanner;
  * IModoReproduccion
  */
 public class ModoReproduccion implements IModoReproduccion {
-    private ArrayList<ArrayList<ICancion>> arraylistcanciones;
-    ModoReproduccion modoReproduccion = new ModoReproduccion();
+    ArrayList<ArrayList<ICancion>> arraylistcanciones;
     Scanner teclado = new Scanner(System.in);
-    int posicion = teclado.nextInt();
+    Duration duracion = Duration.ofSeconds(120);
+    int posicion;
+    int posicion2;
+    ICancion cancion = new Cancion("Antonio", duracion , "Rock", "Antonio");
+    ICancion cancion1 = new Cancion("DOJA", duracion, "pop", "Dua");
+    ICancion cancion2 = new Cancion("CAT", duracion, "ESBN", "PEPE");
+    
+
+
+    
     
     
 
@@ -38,7 +49,8 @@ public class ModoReproduccion implements IModoReproduccion {
      * @param posicion la posición de la playlist a seleccionar.
      */
     public void seleccionarPlaylist(int posicion){
-        modoReproduccion.obtenerPlaylists().get(posicion);
+        posicion2 = posicion;
+        arraylistcanciones.get(posicion);
     }
     
 
@@ -46,7 +58,7 @@ public class ModoReproduccion implements IModoReproduccion {
      * Selecciona la siguiente cancion dentro de la lista de reproducción.
      */
     public void siguienteCancion(){
-        modoReproduccion.seleccionarPlaylist(posicion +1);
+        arraylistcanciones.get(posicion2 +1);
         
     }
     
@@ -55,7 +67,7 @@ public class ModoReproduccion implements IModoReproduccion {
      * Selecciona la canción anterior dentro de la lista de reproducción.
      */
     public void cancionAnterior(){
-        modoReproduccion.seleccionarPlaylist(posicion -1);
+        arraylistcanciones.get(posicion2 -1);
     }
 
 
@@ -63,9 +75,27 @@ public class ModoReproduccion implements IModoReproduccion {
      * @return la canción reproduciendose actualmente.
      */
     public ICancion obtenerCancion(){
+        posicion = teclado.nextInt();
+        cancion = arraylistcanciones.get(posicion2).get(posicion);
     
-        modoReproduccion.seleccionarPlaylist(posicion-1);
-        //poner mas cosas que se me olvido
-        return null;
+        return cancion;
+        
+
     }
+
+    public void agregarcancnion(){
+        arraylistcanciones.get(posicion).add(cancion);
+        arraylistcanciones.get(posicion).add(cancion1);
+        arraylistcanciones.get(posicion).add(cancion2);
+        arraylistcanciones.get(posicion).add(cancion1);
+    
+    
+       
+        
+        
+        
+
+    }
+   
+    
 }
