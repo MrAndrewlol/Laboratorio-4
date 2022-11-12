@@ -4,6 +4,12 @@
 
 //Interfaces del laboratorio 4 
 
+
+
+//Universidad del Valle de Guatemala
+
+//Interfaces del laboratorio 4 
+
 /**
  * IRadio
  */
@@ -102,14 +108,11 @@ import java.util.Scanner;
 
 
 
-
         @Override
         public void cambiarA_AM() {
             // TODO Auto-generated method stub
             
         }
-
-
 
 
 
@@ -121,13 +124,12 @@ import java.util.Scanner;
 
 
 
-
-
         @Override
         public void subirEmisora() {
             // TODO Auto-generated method stub
             
         }
+
 
 
         @Override
@@ -136,16 +138,11 @@ import java.util.Scanner;
             
         }
 
-
-
-
         @Override
         public float obtenerEmisoraActual() {
             // TODO Auto-generated method stub
             return 0;
         }
-
-
 
 
         @Override
@@ -154,13 +151,12 @@ import java.util.Scanner;
             return null;
         }
 
+
         @Override
         public int obtenerPosicionEmisora(float emisora) {
             // TODO Auto-generated method stub
             return 0;
         }
-
-
 
         @Override
         public void guardarEmisoraActual() {
@@ -169,15 +165,11 @@ import java.util.Scanner;
         }
 
 
-
-
         @Override
         public void cargarEmisora(int posicion) {
             // TODO Auto-generated method stub
             
         }
-
-
 
 
         @Override
@@ -197,14 +189,11 @@ import java.util.Scanner;
 
 
 
-
-
         @Override
         public void siguienteCancion() {
             // TODO Auto-generated method stub
             
         }
-
 
 
 
@@ -216,13 +205,11 @@ import java.util.Scanner;
         }
 
 
-
         @Override
         public ICancion obtenerCancion() {
             // TODO Auto-generated method stub
             return null;
         }
-
 
 
 
@@ -233,15 +220,11 @@ import java.util.Scanner;
         }
 
 
-
-
         @Override
         public void desconectarTelefono() {
             // TODO Auto-generated method stub
             
         }
-
-
 
 
 
@@ -259,12 +242,40 @@ import java.util.Scanner;
             
         }
 
-
-
         @Override
         public void apagar() {
             // TODO Auto-generated method stub
             
+        }
+
+
+
+        @Override
+        public Bandas obtenerBanda() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+
+        @Override
+        public ITelefono obtenerTelefonoConectado() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+
+
+        @Override
+        public boolean estaEncendida() {
+            // TODO Auto-generated method stub
+            return false;
+        }
+
+
+        @Override
+        public int obtenerVolumen() {
+            // TODO Auto-generated method stub
+            return 0;
         }
 
 
