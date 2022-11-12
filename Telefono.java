@@ -3,6 +3,9 @@
 //Universidad del Valle de Guatemala
 
 //Interfaces del laboratorio 4 
+//Andre Yatmian Jo Mai 22199
+//Esteban Meza 22252
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
