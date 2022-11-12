@@ -14,8 +14,12 @@ public class Telefono implements ITelefono{
     private String nombre;
     private String Numbero;
     private String dueno;
+    public Contacto cation = new Contacto();
+    ArrayList<IContacto> arraylistcontact;
+
+
+
     
-    Telefono telefono = new Telefono();
     Scanner teclado = new Scanner(System.in);
 
     /**
@@ -57,8 +61,11 @@ public class Telefono implements ITelefono{
      * @return Los contactos del teléfono.
      */
     public ArrayList<IContacto> obtenerContactos(){
-        System.out.println("Por favor ingresar el nombre de la cancion");
-        return null;
-        
+        //System.out.println("Por favor ingresar el nombre de la cancion");
+        arraylistcontact.add( new Contacto("Jose", "54507850" ) );
+        arraylistcontact.add( new Contacto("Jeiby", "54507850" ) );
+        //poner parametros
+        return arraylistcontact;
+      
     }
 }
